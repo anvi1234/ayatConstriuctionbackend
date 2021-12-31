@@ -1,0 +1,12 @@
+{
+    "development":{
+        "PORT":3000,
+        "MONGODB_URI":"mongodb://localhost:27017/ayatConstruction",
+        "JWT_SECRET":"SECRET123",
+        "JWT_EXPIRE": "24h"
+    },
+    "production":{
+        "PORT":80,
+        "MONGODB_URI":"mongodb://xxxxx/ayatConstruction"
+    }
+}
