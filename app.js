@@ -7,14 +7,14 @@ const bodyParser = require("body-parser");
 const passport = require("passport");
 const cors = require("cors");
 const { links } = require("express/lib/response");
-const rtIndex = require("./routes/user.routes")
+const rtIndex = require("./routes/index.route")
 var app = express()
 app.use(bodyParser.urlencoded({ extended: false })); 
 app.use(passport.initialize());
 app.use(bodyParser.json());
 app.use(cors());
 
-app.use('/api', rtIndex);
+app.use(require('./routes/index.route'));
 app.use((err,req,res,next)=>{
     if(err.name === 'ValidationError'){
             var valError =[];
